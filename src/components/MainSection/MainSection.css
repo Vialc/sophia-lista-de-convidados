@@ -1,0 +1,23 @@
+.main-section {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  background: linear-gradient(-45deg, #ef3b36 0%, #ffffff 100%);
+	background-size: 400% 400%;
+	animation: backgroundTransition 5s ease-in-out infinite;
+}
+
+@keyframes backgroundTransition {
+	0% {
+		background-position: 0% 80%;
+	}
+	50% {
+		background-position: 80% 100%;
+	}
+	100% {
+		background-position: 0% 90%;
+	}
+}
