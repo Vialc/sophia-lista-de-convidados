@@ -1,0 +1,14 @@
+.content-area__header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.content-area__header img {
+  height: 25vh;
+}
+
+.content-area__header p {
+  font-family: 'Dancing Script', cursive;
+  font-size: 2.5rem;
+}

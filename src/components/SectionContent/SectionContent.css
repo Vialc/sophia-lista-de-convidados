@@ -1,0 +1,33 @@
+.content-area__body{
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem 1rem 1.5rem 1rem;
+}
+
+.content-area__body :nth-child(1){
+  font-size: 2rem;
+  margin-bottom: .5rem;
+}
+
+.content-area__body :nth-child(2){
+  font-size: 1.25rem;
+}
+
+.content-area__body :nth-child(3){
+  font-size: 1.25rem;
+  align-self: center;
+  margin-top: 2.75rem;
+  background: linear-gradient(35deg, #ef3b36 20%, #ffffff 100%);
+  padding: 8px;
+  border-radius: 12px;
+}
+
+.content-area__body :nth-child(3):hover {
+  cursor: pointer;
+}
+
+.content-area__body :nth-child(3):active {
+  cursor: pointer;
+  transform: scale(.9);
+  transition: transform .1s ease-out;
+}
