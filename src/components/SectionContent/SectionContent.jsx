@@ -4,7 +4,7 @@ import { useParams } from 'react-router-dom';
 import "./SectionContent.css";
 
 export function SectionContent() {
-  const [guestName, /*setGuestName*/] = useState('Vitor')
+  const [guestName, setGuestName] = useState('Vitor')
 
   const params = useParams()
 
@@ -17,10 +17,9 @@ export function SectionContent() {
   useEffect(() => {
     axios.get(`https://cors-anywhere.herokuapp.com/https://backend-sophia-guests-production.up.railway.app/guests/${params.guestId}`)
       .then((res) => {
-        console.log(res.data);
+        setGuestName(res.data.name);
       })
   
-    
   }, [])
   
   return (
