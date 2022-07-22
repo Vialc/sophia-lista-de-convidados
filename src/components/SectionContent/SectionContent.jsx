@@ -43,7 +43,7 @@ export function SectionContent() {
     <div className="content-area__body">
       {fetchingGuest ? (
         <h3>Caregando..</h3>
-      ) : thanksMessage ? (<><h3>Obrigado por confirmar sua presença!</h3></>) : (
+      ) : thanksMessage ? (<><h3>Obrigada por confirmar sua presença!</h3></>) : (
         <>
           <h3>Oi {guestName}.</h3>
           <h3>

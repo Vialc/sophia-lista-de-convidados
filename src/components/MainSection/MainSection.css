@@ -6,7 +6,7 @@
   align-items: center;
   
    background: linear-gradient(-45deg, #ef3b36 0%, #ffffff 100%);
-	background-size: 200% 200%;
+	background-size: 400% 400%;
 	animation: backgroundTransition 5s ease-in-out infinite; 
 }
 
