@@ -4,8 +4,13 @@
   align-items: center;
 }
 
-.content-area__header img {
+.content-area__header img:nth-child(1) {
   height: 25vh;
+  
+}
+
+.adorno {
+  height: 15px;
 }
 
 .content-area__header p {
