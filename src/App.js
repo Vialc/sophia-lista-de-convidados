@@ -1,11 +1,13 @@
-
-import './App.css';
-import { MainSection } from './components/MainSection/MainSection';
+import "./App.css";
+import { MainSection } from "./components/MainSection/MainSection";
+import { Routes, Route } from "react-router-dom";
 
 function App() {
   return (
     <div className="App">
-      <MainSection />
+      <Routes>
+        <Route path="/guests/:guestId" element={<MainSection />} />
+      </Routes>
     </div>
   );
 }
