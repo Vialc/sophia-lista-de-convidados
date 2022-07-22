@@ -3,6 +3,15 @@ import axios from "axios";
 import { useParams } from "react-router-dom";
 import "./SectionContent.css";
 
+const api = axios.create({
+  baseURL: "https://backend-sophia-guests-production.up.railway.app/guests/",
+  proxy: {
+    protocol: 'https',
+    host: '127.0.0.1',
+    port: 9000,
+  }
+});
+
 export function SectionContent() {
   const [guestName, setGuestName] = useState("");
   const [fetchingGuest, setFetchingGuest] = useState(true);
@@ -11,7 +20,7 @@ export function SectionContent() {
   const params = useParams();
 
   function handleConfirmation() {
-    axios.patch(`https://backend-sophia-guests-production.up.railway.app/guests/${params.guestId}`, {
+    api.patch(`https://backend-sophia-guests-production.up.railway.app/guests/${params.guestId}`, {
       confirm: 'sim'
     })
 
@@ -20,7 +29,7 @@ export function SectionContent() {
   }
 
   useEffect(() => {
-    axios
+    api
       .get(
         `https://backend-sophia-guests-production.up.railway.app/guests/${params.guestId}`
       )
